@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">invokeGetWeatherAPI</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>invokeGetWeatherAPI&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">238.5</property>
+      <property
+         name="x">303.36133</property>
+   </MethodCall>
+   <View
+      id="View4">
+      <property
+         name="activityId">showCurrentWeather</property>
+      <property
+         name="page">/showCurrentWeather.amx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>showCurrentWeather&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">232.89648</property>
+      <property
+         name="x">558.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="MethodCall3"
+      to="View4">
+      <property
+         name="fromOutcome">invokeGetWeatherAPI</property>
+      <property
+         name="sdm:polyPoints">R50,344.36133,238.14941,517.0,232.5459,L50</property>
+   </ControlFlowCase>
+</SDM>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="searchcitiespp1">
+    <amx:facet name="primary">
+      <amx:inputText label="label1" id="it1" inputType="text" autoCorrect="off" simple="true" hintText="Country"
+                     value="#{pageFlowScope.SearchCities.countryName}"
+                     valueChangeListener="#{pageFlowScope.SearchCities.countryNameChanged}"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandLink text="" id="cl1" action="#{pageFlowScope.SearchCities.searchForCities}">
+          <amx:image inlineStyle="width:25px;height:25px" source="/resources/images/filter.png" id="i1"/>
+        </amx:commandLink>
+    </amx:facet>
+    <amx:listView var="row" value="#{bindings.citiesForCountry.collectionModel}"
+                  fetchSize="#{bindings.citiesForCountry.rangeSize}"
+                  selectedRowKeys="#{bindings.citiesForCountry.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.citiesForCountry.collectionModel.makeCurrent}"
+                  showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1" rendered="true">
+      <amx:listItem id="li1" action="showWeather">
+        <amx:setPropertyListener id="cityProp" from="#{row.element}" to="#{pageFlowScope.cityName}" type="action"/>
+          <amx:setPropertyListener id="countryProp" from="#{pageFlowScope.SearchCities.countryName}" to="#{pageFlowScope.countryName}"
+                                   type="action"/>
+        <amx:outputText value="#{row.element}" id="ot1"/>
+      </amx:listItem>
+    </amx:listView>
+  </amx:panelPage>
+</amx:view>

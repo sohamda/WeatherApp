@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="showCurrentWeatherPageDef"
+                Package="com.weather.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="WeatherAppDC" id="WeatherAppDCIterator"/>
+    <accessorIterator MasterBinding="WeatherAppDCIterator" Binds="currentWeather" RangeSize="25"
+                      DataControl="WeatherAppDC" BeanClass="com.weather.application.response.getweather.CurrentWeather"
+                      id="currentWeatherIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="currentWeatherIterator" id="location">
+      <AttrNames>
+        <Item Value="location"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="time">
+      <AttrNames>
+        <Item Value="time"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="wind">
+      <AttrNames>
+        <Item Value="wind"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="visibility">
+      <AttrNames>
+        <Item Value="visibility"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="skyConditions">
+      <AttrNames>
+        <Item Value="skyConditions"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="temperature">
+      <AttrNames>
+        <Item Value="temperature"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="dewPoint">
+      <AttrNames>
+        <Item Value="dewPoint"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="relativeHumidity">
+      <AttrNames>
+        <Item Value="relativeHumidity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="currentWeatherIterator" id="pressure">
+      <AttrNames>
+        <Item Value="pressure"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

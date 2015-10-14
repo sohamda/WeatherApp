@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">SearchCities</property>
+      <property
+         name="page">/SearchCities.amx</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>SearchCities&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">173.94824</property>
+      <property
+         name="x">300.0</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="taskFlowId">ShowWeather</property>
+      <property
+         name="activityId">ShowWeather</property>
+      <property
+         name="documentReference">/ShowWeather.xml</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ShowWeather&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">172.89648</property>
+      <property
+         name="x">566.0</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">showWeather</property>
+      <property
+         name="sdm:polyPoints">R50,341.0,173.59766,525.0,172.5459,L50</property>
+   </ControlFlowCase>
+</SDM>

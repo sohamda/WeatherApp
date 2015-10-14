@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="ShowWeather">
+    <default-activity>invokeGetWeatherAPI</default-activity>
+    <input-parameter-definition id="__1">
+      <name>cityName</name>
+      <value>#{pageFlowScope.cityName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__2">
+      <name>countryName</name>
+      <value>#{pageFlowScope.countryName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <method-call id="invokeGetWeatherAPI">
+      <method>#{bindings.invokeGetWeatherAPI.execute}</method>
+      <outcome>
+        <fixed-outcome>invokeGetWeatherAPI</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="showCurrentWeather">
+      <page>/showCurrentWeather.amx</page>
+    </view>
+    <control-flow-rule id="__3">
+      <from-activity-id>invokeGetWeatherAPI</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>invokeGetWeatherAPI</from-outcome>
+        <to-activity-id>showCurrentWeather</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

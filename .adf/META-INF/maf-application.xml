@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="WeatherApp" id="com.company.WeatherApp"
+                   appControllerFolder="ApplicationController"
+                   listener-class="com.weather.application.LifeCycleListenerImpl">
+  <adfmf:featureReference refId="com.weather.CitiesByCountry" id="fr1"/>
+  <adfmf:preferences>
+    <adfmf:preferenceGroup id="mcs" label="Mobile Cloud Service Settings">
+      <adfmf:preferenceText id="mobileBackendURL" label="Mobile Backend Base URL"
+                            default="https://mobileportalsetrial1304dev-mcsdem0001.mobileenv.us2.oraclecloud.com:443"/>
+      <adfmf:preferenceText id="mobileBackendId" label="Mobile Backend ID"
+                            default="1f0d69b6-c3d8-4236-9234-737254383820"/>
+      <adfmf:preferenceText id="mobileBackendApplicationKeyAndroid"
+                            label="MBE Application Key (Android)" default="b2720c5e-d77a-4e30-8e79-cfdb23ce5414"/>
+      <adfmf:preferenceText id="mbeAnonymousKey" label="MBE Anonymous Key" secret="false"
+                            default="TUNTREVNMDAwMV9NT0JJTEVQT1JUQUxTRVRSSUFMMTMwNERFVl9NT0JJTEVfQU5PTllNT1VTX0FQUElEOmR5Nm91NW5wX3RnbE5r"/>
+    </adfmf:preferenceGroup>
+  </adfmf:preferences>
+  <adfmf:navigation>
+    <adfmf:navigationBar enabled="false"/>
+  </adfmf:navigation>
+</adfmf:application>

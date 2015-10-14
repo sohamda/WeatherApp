@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="SearchCitiesPageDef"
+                Package="com.weather.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="WeatherAppDC" id="WeatherAppDCIterator" Refresh="always"/>
+    <accessorIterator MasterBinding="WeatherAppDCIterator" Binds="citiesForCountry" RangeSize="25"
+                      DataControl="WeatherAppDC" BeanClass="java.lang.String" id="citiesForCountryIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="citiesForCountryIterator" id="citiesForCountry">
+      <nodeDefinition Name="citiesForCountry0">
+        <AttrNames>
+          <Item Value="element"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

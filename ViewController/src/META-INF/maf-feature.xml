@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.weather.CitiesByCountry" name="CitiesByCountry">
+    <adfmf:content id="com.weather.CitiesByCountry.1">
+      <adfmf:amx file="com.weather.CitiesByCountry/cities-task-flow.xml#cities-task-flow">
+        <adfmf:includes>
+          <adfmf:include type="JavaScript" file="resources/js/back.js" id="i1"/>
+        </adfmf:includes>
+      </adfmf:amx>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

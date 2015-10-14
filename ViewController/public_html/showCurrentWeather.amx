@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Weather Info" id="ot1"/>
+    </amx:facet>
+    <amx:panelFormLayout id="pfl1">
+      <amx:panelLabelAndMessage label="#{bindings.location.hints.label}" id="plam5">
+        <amx:outputText value="#{bindings.location.inputValue}" id="ot6"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.time.hints.label}" id="plam8">
+        <amx:outputText value="#{bindings.time.inputValue}" id="ot9"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.wind.hints.label}" id="plam9">
+        <amx:outputText value="#{bindings.wind.inputValue}" id="ot10"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.visibility.hints.label}" id="plam7">
+        <amx:outputText value="#{bindings.visibility.inputValue}" id="ot8"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.skyConditions.hints.label}" id="plam4">
+        <amx:outputText value="#{bindings.skyConditions.inputValue}" id="ot5"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.temperature.hints.label}" id="plam1">
+        <amx:outputText value="#{bindings.temperature.inputValue}" id="ot2"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.dewPoint.hints.label}" id="plam2">
+        <amx:outputText value="#{bindings.dewPoint.inputValue}" id="ot3"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.relativeHumidity.hints.label}" id="plam3">
+        <amx:outputText value="#{bindings.relativeHumidity.inputValue}" id="ot4"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.pressure.hints.label}" id="plam6">
+        <amx:outputText value="#{bindings.pressure.inputValue}" id="ot7"/>
+      </amx:panelLabelAndMessage>
+    </amx:panelFormLayout>
+    <amx:facet name="primary">
+      <amx:commandButton text="Back" id="cb1" action="__back"/>
+    </amx:facet>
+  </amx:panelPage>
+</amx:view>
