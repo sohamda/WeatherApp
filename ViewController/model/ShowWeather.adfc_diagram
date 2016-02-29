@@ -13,9 +13,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">238.5</property>
+         name="y">165.14941</property>
       <property
-         name="x">303.36133</property>
+         name="x">98.36133</property>
    </MethodCall>
    <View
       id="View4">
@@ -28,9 +28,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">232.89648</property>
+         name="y">159.19531</property>
       <property
-         name="x">558.0</property>
+         name="x">353.0</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -40,6 +40,6 @@
       <property
          name="fromOutcome">invokeGetWeatherAPI</property>
       <property
-         name="sdm:polyPoints">R50,344.36133,238.14941,517.0,232.5459,L50</property>
+         name="sdm:polyPoints">R50,139.36133,164.79883,312.0,158.84473,L50</property>
    </ControlFlowCase>
 </SDM>
